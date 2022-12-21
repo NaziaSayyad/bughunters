@@ -1,9 +1,46 @@
 .navlog{
     width: 150px;
-    height: 80px;
+    height: 40px;
     border-radius: 20px;
+    cursor: pointer;
+   margin-left: 20px;
 }
 #papa{
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 55px;
+}
+.homelogo{
+    font-size: 30px;
+    cursor: pointer;
+}
+.left1{
+    display: flex;
+    gap: 80px;
+  align-items: flex-end;
+}
+.searchboxinput{
+    font-size: 30px;
+margin-left: 2px;
+}
+.searchinput{
+   margin-left: 5px;
+    display: block;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+
+}
+.searchbox{
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+   
+
+}
+.searchbox:hover{
+    border: 2px solid blue;
 }
