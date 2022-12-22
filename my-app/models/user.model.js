@@ -12,6 +12,9 @@ const UserSchema =  new Schema({
         type :String,
         enum : ["user", "writer", "admin"],
         default : "user"
-    }
+    },
+    myposts:[{title:String,content:String,image :String}]
+    
 });
+
 export default models.user || model("user", UserSchema);

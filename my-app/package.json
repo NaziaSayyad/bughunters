@@ -23,7 +23,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "redux": "^4.2.0",
-    "redux-thunk": "^2.4.2"
+    "redux-thunk": "^2.4.2",
+    "socket.io": "^4.5.4"
   },
   "devDependencies": {
     "dotenv": "^16.0.3"
