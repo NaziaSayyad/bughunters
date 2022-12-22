@@ -16,4 +16,5 @@ const UserSchema =  new Schema({
     myposts:[{title:String,content:String,image :String}]
     
 });
+
 export default models.user || model("user", UserSchema);
