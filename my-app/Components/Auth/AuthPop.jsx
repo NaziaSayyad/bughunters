@@ -4,10 +4,6 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor,
   Button,
   Img,
   Text,
@@ -30,7 +26,7 @@ function AuthPop() {
         <PopoverTrigger bg="white">
           <Img
             src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
-            atl="avatar"
+            alt="avatar"
             borderRadius="50%"
             h="40px"
             display="block"
