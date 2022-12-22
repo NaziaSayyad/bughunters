@@ -1,7 +1,7 @@
 import Navbar from '../Components/navbar'
 
 export default function App({ Component, pageProps }) {
-  return<>
+  return <>
   <Navbar/>
    <Component {...pageProps} />
   </>
