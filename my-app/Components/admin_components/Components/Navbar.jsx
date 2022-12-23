@@ -2,7 +2,7 @@ import { Flex,Box, Button, Heading, Text, Center } from '@chakra-ui/react'
 import Link from 'next/link'
 import React from 'react'
 
-const Navbar = () => {
+const Admin_Navbar = () => {
   return (
     <Box bg="yellow.300" mt="3">
         <Center>
@@ -18,4 +18,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Admin_Navbar
