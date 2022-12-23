@@ -33,6 +33,9 @@ export default async function handler (req, res){
     catch(e){
      console.log(e);
      res.send("Error", e)
-    }
-    
+}
+  } catch (e) {
+    console.log(e);
+    res.send("Error", e);
+  }
 }
