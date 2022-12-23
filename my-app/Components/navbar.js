@@ -22,6 +22,7 @@ export default function Navbar() {
         zIndex={10}
         // bg="black"
         color="white"
+        bgColor={"white"}
       >
         <Flex justifyContent="space-between" mx="auto">
           <HStack spacing={3} display={{ base: "none", md: "flex" }} gap="6">
