@@ -8,6 +8,7 @@ import { TbNotebook } from "react-icons/tb";
 import { ImPencil } from "react-icons/im";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { GrNotification } from "react-icons/gr";
+
 export default function Navbar() {
   // const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -152,6 +153,47 @@ export default function Navbar() {
         </Flex>
       </chakra.header>
     </>
+
+import AuthPop from "./Auth/AuthPop";
+import AuthLogin from "./Auth/AuthLogin";
+import { Flex, Stack } from "@chakra-ui/react";
+
+const Navbar = () => {
+  return (
+    <div id={styles.papa}>
+      <div className="left">
+        <div className={styles.left1}>
+          <img
+            className={styles.navlog}
+            src="https://i.imgur.com/Pt5qPA4.jpg"
+            alt="nav"
+          />
+          <FcHome className={styles.homelogo} />
+          <TbNotebook className={styles.homelogo} />
+          <ImPencil className={styles.homelogo} />
+          <BsFillPeopleFill className={styles.homelogo} />
+          <GrNotification className={styles.homelogo} />
+        </div>
+      </div>
+      <div className="right">
+        <div className={styles.right1}>
+          <div className={styles.searchbox}>
+            <FcSearch className={styles.searchboxinput} />
+            <input
+              type="text"
+              className={styles.searchinput}
+              placeholder="Search here ..."
+            />
+          </div>
+        </div>
+      </div>
+
+      <Flex align={"center"} gap="10px">
+        <AuthPop />
+        <AuthLogin />
+      </Flex>
+    </div>
+
   );
 }
 
