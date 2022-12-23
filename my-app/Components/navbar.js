@@ -23,7 +23,9 @@
 //         zIndex={10}
 //         // bg="black"
 //         color="white"
+
 //         bgColor={"white"}
+
 //       >
 //         <Flex justifyContent="space-between" mx="auto">
 //           <HStack spacing={3} display={{ base: "none", md: "flex" }} gap="6">
@@ -159,6 +161,12 @@
 // // import AuthLogin from "./Auth/AuthLogin";
 // // import { Flex, Stack } from "@chakra-ui/react";
 
+//   );
+// }
+// // import AuthPop from "./Auth/AuthPop";
+// // import AuthLogin from "./Auth/AuthLogin";
+// // import { Flex, Stack } from "@chakra-ui/react";
+
 // // const Navbar = () => {
 // //   return (
 // //     <div id={styles.papa}>
@@ -205,3 +213,11 @@
 // // // <FcSearch className={styles.searchboxinput}/>
 // // // <input type="text" className={styles.searchinput}  placeholder="Search here ..."/>
 // // // </div>
+
+// {
+//   /* <img className={styles.navlog} src="https://i.imgur.com/Pt5qPA4.jpg" alt="nav" /> */
+// }
+// // <div className={styles.searchbox}>
+// // <FcSearch className={styles.searchboxinput}/>
+// // <input type="text" className={styles.searchinput}  placeholder="Search here ..."/>
+// // </div>
