@@ -40,7 +40,7 @@ import {
   ModalFooter,
   Center,
 } from "@chakra-ui/react";
-import Navbar from "./Components/Navbar";
+import Navbar from "../../Components/Navbar/Navbar";
 
 function index({ user }) {
   const toast = useToast();
@@ -57,7 +57,7 @@ function index({ user }) {
     fetch(`http://localhost:3000/api/admin?name=${search}`, {
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("usertoken")}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     })
       .then((res) => res.json())
@@ -72,7 +72,7 @@ function index({ user }) {
     fetch(`http://localhost:3000/api/admin/delete/${id}`, {
       method: "DELETE",
       headers: {
-        Authorization: `Bearer ${localStorage.getItem("usertoken")}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     })
       .then((res) => res.json())
@@ -88,7 +88,7 @@ function index({ user }) {
         fetch(`http://localhost:3000/api/admin`, {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("usertoken")}`,
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         })
           .then((res) => res.json())
@@ -101,7 +101,7 @@ function index({ user }) {
 
   return (
     <Box>
-          <Navbar/>
+      <Navbar />
       <Box>
           <Center>
         <Flex m='4'>
