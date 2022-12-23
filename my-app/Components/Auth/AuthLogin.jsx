@@ -17,7 +17,7 @@ import {
   Input,
   useToast,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AuthSignUp from "./AuthSignUp";
 const initValue = {
   email: "",
@@ -26,6 +26,7 @@ const initValue = {
 export default function AuthLogin() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [formState, setFormState] = useState(initValue);
+  const [login, setLogin] = useState(false);
   const toast = useToast();
   function handleChange(e) {
     const { name, value } = e.target;
@@ -76,6 +77,11 @@ export default function AuthLogin() {
           });
           setFormState(initValue);
           localStorage.setItem("token", JSON.stringify(res.token));
+          localStorage.setItem(
+            "details",
+            JSON.stringify({ name: res.name, email: res.email })
+          );
+          click();
           return;
         }
         if (res.msg === "password incorrect") {
@@ -105,10 +111,17 @@ export default function AuthLogin() {
         }
       });
   }
+
+  function click() {
+    const login = JSON.parse(localStorage.getItem("details")) || "";
+    if (login) {
+      setLogin(true);
+    }
+  }
   return (
     <>
       <Text fontSize={"20px"} cursor={"pointer"} onClick={onOpen}>
-        Log in
+        {login ? "Log out" : "Login"}
       </Text>
 
       <Modal isOpen={isOpen} onClose={onClose}>
