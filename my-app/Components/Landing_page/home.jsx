@@ -10,7 +10,7 @@ export default function Dashboard() {
       .catch((err) => err);
   }, []);
   return (
-    <Box w={{ base: "100%", md: "100%", xl: "100%" }} m={{ base: "auto", md: "auto" }}>
+    <Box w={"100%"} m={{ base: "auto", md: "auto" }}>
       <Grid templateColumns={{ base: "repeat(1, 1fr)", xl: "repeat(2,1fr)" }}>
         {data.map((e, i) => {
           return (
