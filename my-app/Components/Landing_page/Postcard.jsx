@@ -14,7 +14,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-export const Postcard = ({ data }) => {
+export  default function Postcard ({ data }) {
   const { title, content, image } = data;
 
   return (
