@@ -38,7 +38,9 @@ import {
   Skeleton,
   Stack,
   ModalFooter,
+  Center,
 } from "@chakra-ui/react";
+import Navbar from "./Components/Navbar";
 
 function index({ user }) {
   const toast = useToast();
@@ -99,20 +101,22 @@ function index({ user }) {
 
   return (
     <Box>
+          <Navbar/>
       <Box>
-        <Flex>
+          <Center>
+        <Flex m='4'>
+
           <Input
             type="text"
             placeholder="Search here....."
             boxShadow="outline"
             onChange={(e) => setSearch(e.target.value)}
-            w="150px"
+            w="150"
             ml="10px"
             mr="10px"
-          />
-
-          <Button colorScheme={"orange"}>Add User</Button>
+            />
         </Flex>
+            </Center>
         <Box>
           {loading ? (
             <Stack>
@@ -172,24 +176,24 @@ function index({ user }) {
               />
             </Stack>
           ) : (
-            <TableContainer>
-              <Table variant="striped" colorScheme="purple">
+            <TableContainer >
+              <Table variant="striped" colorScheme="purple"size={{base:"25%",md:"50%", lg:"100%"}} >
                 <TableCaption>User's Post</TableCaption>
-                <Thead>
+                <Thead size={{base:"25%",md:"50%", lg:"100%"}}>
                   <Tr>
                     <Th>User Id</Th>
-                    <Th>Name</Th>
-                    <Th>Email</Th>
-                    <Th>No. of Posts</Th>
-                    <Th>Role</Th>
-                    <Th> Delete</Th>
+                    <Th >Name</Th>
+                    <Th >Email</Th>
+                    <Th >No. of Posts</Th>
+                    <Th >Role</Th>
+                    <Th > Delete</Th>
                   </Tr>
                 </Thead>
                 <Tbody>
                   {data.length > 0 &&
                     data.map((el) => {
                       return (
-                        <Tr key={el._id}>
+                        <Tr key={el._id} size={{base:"25%",md:"50%", lg:"100%"}}>
                           <Td>{el._id}</Td>
                           <Td>{el.name}</Td>
                           <Td>{el.email}</Td>
@@ -239,12 +243,7 @@ function index({ user }) {
             </TableContainer>
           )}
         </Box>
-        <Button ml={5} colorScheme={"pink"}>
-          Prev
-        </Button>
-        <Button colorScheme="blue" ml="5">
-          Next
-        </Button>
+      
       </Box>
     </Box>
   );
