@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   FormControl,
   FormLabel,
-  Input,
+  Input,Box,
   Select,
   Button,
   Container,
@@ -13,6 +13,7 @@ import {
   SimpleGrid,
   GridItem,
 } from "@chakra-ui/react";
+import Navbar from "./Components/Navbar";
 const initState = {
   name: "",
   email: "",
@@ -32,11 +33,20 @@ const adduser = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+   
   };
   const handleSubmit = () => {
+    const payload = {
+        name: name,
+        email: email,
+        role: role,
+        myposts: [ {title: title, content: content, image: image}],
+        password: password,
+    }
+    console.log(payload)
   fetch(`http://localhost:3000/api/admin/add`,{
     method: "POST",
-    body: JSON.stringify(formData),
+    body: JSON.stringify(payload),
     headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("usertoken")}`,
@@ -51,7 +61,8 @@ const adduser = () => {
   }).catch(()=> alert("Something went wrong"))
   }
   return (
-    <>
+    <Box>
+    <Navbar/>
       <Container
         maxW="container.lg"
         padding="10"
@@ -169,7 +180,7 @@ const adduser = () => {
           </VStack>
         </Flex>
       </Container>
-    </>
+    </Box>
   );
 };
 
